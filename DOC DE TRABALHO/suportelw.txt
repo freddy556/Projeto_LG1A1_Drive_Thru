@@ -1,0 +1,49 @@
+
+Os desafios da Locaweb são: 
+Produto> Precisamos entender o produto e se temos um bom produto para os clientes.
+Entrega> Precisamos entregar o produto de forma rápida
+Vender bem> Para cada produto temos um concorrente então precisamos vender bem, enfrentar a concorrência e vender a um preço barato. Para isso contamos com um time especializado, o suporte Locaweb.
+
+
+
+Suporte Locaweb
+
+
+O propósito da Locaweb é fazer negócios nascerem e prosperarem por meio da tecnologia e, portanto tem soluções para antendê-los.
+Afim de manter a qualidade do serviço prestado e manutenção dos planos de seus clientes a Locaweb tem um time especializado para o atendimento as suas unidades de negócio. O time de suporte é formado por especialistas dos mais diversos produtos como email e hospedagem. A operação de atendimento é suportada por três pilares: Entregar solução ao cliente, no menor tempo e com excelente relacionamento. Com uma equipe que gera aprendizado diário e constantemente identifica oportunidades de melhorias no processo de atendimento ou no produto. Algo que trás agilidade ao atendimento é o fato de ter um suporte interno. Todo o suporte fica localizado onde ficam o data center, o time de produtos e time de operações. No momento em que é identificado uma oportunidade de melhoria do produto essas melhorias são implementadas com uma rapidez muito maior. 
+O time de suporte orienta o cliente sobre a utilização do produto, ajudando em questões técnicas. 
+
+Para entender melhor o perfil dos clientes o time de suporte utiliza o conceito de "Personas".
+
+Personas são grupo de usuários (clientes) com padrões de comportamento, atitudes e motivações similares em termos de decisão de compra, uso de tecnologia e produtos, estilo de vida, etc. São usadas para:
+1 - Conhecer e entender o clientes/usuários de produtos e serviços. 
+2 - Trazer o usuário para o foco do projeto, ao lado do modelo de negócios e da viabilidade do sistema.
+3 - Tornar as decisões de design mais humanas e menos abstradas.
+
+áreas do suporte:
+Processos e Comunicação do Atendimento
+Ouvidoria
+Tráfego
+Treinamento
+
+
+Métricas do time de atendimento: TMA, FCR e NPS
+
+
+Tempo Médio de Atendimento: Com o TMA conseguimos medir quanto gastamos para atender um cliente, nossa missão é entregar a solução ao cliente no menor tempo possível, com um excelente atendimento.
+
+
+
+First Call Resolution: Com FCR medimos a nossa capacidade de solucionar o problema do cliente já no primeiro contato. Assim, quanto maior o nosso FCR, melhor a nossa percepção sobre resolvermos o problema do cliente. Ele sinaliza que dentro de um mês o cliente não voltou a contatar a Locaweb para o mesmo assunto.
+
+O Net Promoter Score (NPS): É um método criado para medir a satisfação dos clientes em relação ao produto que a empresa fornece. Através dele, medimos também a satisfação do atendimento.
+
+
+
+Pesquisa de satisfação X NPS
+
+Promotores - são clientes que dão notas 9 ou 10. São fiéis à marca, gostam do produto e o indicariam com entusiasmo.
+
+Neutros - são aqueles que dão notas 7 ou 8. São clientes satisfeitos, mas não entusiasmados o suficiente para realizarem uma indicação, permanecendo vulneráveis a ofertas competitivas.
+
+Detratores - aqueles que dão notas de 0 a 6. São clientes que, por alguma razão se encontram descontentes e não fariam a indicação da sua marca.
