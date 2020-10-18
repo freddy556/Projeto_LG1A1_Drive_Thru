@@ -2,18 +2,25 @@
 # Objetivo: Página do Admin. Cadastrar e consultar produtos.
 ----------------------------------------------------------*/
 
+
+/*Autores: Alexandre Yudi e Lucas Mendes
+	Data:18/10/2020*/
+
 /* Bibliotecas */
 #include <stdio.h>
 #include <conio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <locale.h>
 
 /* Struct */
 typedef struct {   
     int    	Codprod;
     char   	Nomeprod[20+1]; /* 20 úteis + o \0 = NULL TERMINATOR */
     float	Custoprod;
-} registro; 
+} registro;
+
+/* struct para usuário e senha*/ 
 
 /* Variaveis */
 registro reg; 
@@ -63,6 +70,7 @@ void gravar_produto(void){
 
 /* Corpo do Programa */
 int main (){
+	setlocale(LC_ALL, "");
 	op: ;
 	system("MODE con cols=45 lines=30");
 	system("cls");
@@ -89,15 +97,18 @@ int main (){
 			system("Consulta_registros");
 			
 			exit(0);
-			break;
+			break;	
 		case '0':
+			fflush(stdin);
 			system("Index");
-			exit(0);
+			/*exit(0);*/
+			return 0;
 			break;
 		default:
-			printf("\n Opcao invalida!");
+			system("erroradmin.exe");
+			/*printf("\n Opcao invalida!");
 			getch();
-			goto op;
+			goto op;*/
 	}
 	goto op;
 	

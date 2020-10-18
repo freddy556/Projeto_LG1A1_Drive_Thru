@@ -6,12 +6,14 @@
 #include <stdio.h>
 #include <conio.h>
 #include <stdlib.h>
+#include <locale.h>
 
 /* Variaveis */
 
 /* Corpo do Programa */
 int main (void) {
-	op: ;
+	setlocale(LC_ALL, "");
+	op:;
 	system("MODE con cols=45 lines=30");
 	system("cls");
 	printf("\n\n   =======================================");
@@ -30,21 +32,24 @@ int main (void) {
 	char op = getch();
 	switch (op) {
 		case '1':
-			system("Admin");
-			
+			fflush(stdin);
+			system("login");
 			exit(0);
 			break;
 		case '2':
+			fflush(stdin);
 			printf("\n cliente");	
 			break;
 		case '0':
+			fflush(stdin);
 			printf("\n Saiu");
-			exit(0);
+			return 0;
 			break;
 		default:
-			printf("\n Opcao invalida!");
+			system("erroradmin");
+			/*printf("\n Opcao invalida!");
 			getch();
-			goto op;
+			goto op;*/
 	}
 	return (0);
 }
