@@ -72,8 +72,8 @@ int login()
 				printf("Usuário ou senha invalidos!\n");
 				tentativas++;
 			}
-		} while (tentativas < 2);
-		printf("Numero maximo de tentativas alcançado!\n");
+		} while (tentativas < 0);
+		/*printf("Numero maximo de tentativas alcançado!\n");*/
 		exit(0);
         return 0;
 	}

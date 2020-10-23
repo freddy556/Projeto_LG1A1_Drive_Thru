@@ -38,7 +38,7 @@ int main (void) {
 			break;
 		case '2':
 			fflush(stdin);
-			printf("\n cliente");	
+			system("erroradmin");	
 			break;
 		case '0':
 			fflush(stdin);
