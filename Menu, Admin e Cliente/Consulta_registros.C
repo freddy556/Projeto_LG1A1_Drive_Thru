@@ -1,3 +1,7 @@
+/*-----------------------------------------------------------------
+# Objetivo: Consultar os produtos cadastrados pela página do Admin.
+-----------------------------------------------------------------*/
+
 /* Bibliotecas */
 #include <stdio.h>
 #include <conio.h>
@@ -15,8 +19,7 @@ typedef struct {
 registro reg; 
 
 /* Funções */
-void consulta_todos_produtos (void)
-{
+void consulta_todos_produtos (void) {
     FILE  *  A; /* A variável 'A' se refere ao arquivo que vai ser manipuldo [PRODUTOS.DAT]*/
     A  =  fopen ("PRODUTOS.DAT" , "r"); /* Abrir como leitura */		
     if ( A == NULL ){
