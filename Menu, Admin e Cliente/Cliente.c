@@ -5,7 +5,7 @@
 #include <string.h>
 #include <locale.h>
 
-#define  NOME_ESTABELECIMENTO       "DRIVE THRU DO MICKEY & DONALDS"
+#define  NOME_ESTABELECIMENTO       "DRIVE THRU DO MICKEY & DONALD"
 
 /* Struct */
 typedef struct {   
@@ -238,6 +238,7 @@ int main (){
 		fflush (stdin); esc = getche();
 	   
 	} while ( esc == 'S' || esc == 's');
+	
     
 	/* Mostra o ticket completo com o total a pagar */
     geraTicket(Rpgto.Codpgto, ++quantidade_itens, registroped, total, '1');
@@ -249,6 +250,6 @@ int main (){
 	/* 't' = guarda temporariamente esse registro para preservar o nro do pedido e o total*/
     registraPgto (Rpgto, 't');
 	
-	
+	system("pagamento.exe");
     return (0);
 }

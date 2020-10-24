@@ -1,5 +1,5 @@
 /*-------------------------------------------------------------------------------------
-# Objetivo: Página inicial do programa. Fornecer opção de acesso como admin ou cliente.
+# Objetivo: Sub menu da seção cliente. Opção de realizar pedido e escolher forma de pagamento.
 -------------------------------------------------------------------------------------*/
 
 /* Bibliotecas */
@@ -15,27 +15,27 @@ int main (void) {
 	system("MODE con cols=45 lines=30");
 	system("cls");
 	printf("\n\n   =======================================");
-	printf("\n   |             ENTRAR COMO             |");
+	printf("\n   |               CLIENTE                 |");
 	printf("\n   =======================================");
-	printf("\n   |                                     |");
-	printf("\n   |          1. ADMINISTRADOR           |");
-	printf("\n   |                                     |");
-	printf("\n   |          2.    CLIENTE              |");
-	printf("\n   |                                     |");
-	printf("\n   |          0.     SAIR                |");
-	printf("\n   |                                     |");
+	printf("\n   |                                       |");
+	printf("\n   |          1. REALIZAR PEDIDO           |");
+	printf("\n   |                                       |");
+	printf("\n   |          2.    PAGAMENTO              |");
+	printf("\n   |                                       |");
+	printf("\n   |          0.     SAIR                  |");
+	printf("\n   |                                       |");
 	printf("\n   =======================================");
 	
 	printf("\n             ");
 	char op = getch();
 	switch (op) {
 		case '1':
-			system("login");
+			system("Cliente");
 			
 			exit(0);
 			break;
 		case '2':
-			system("Cliente_menu");
+			system("pagamento");
 				
 			break;
 		case '0':
