@@ -340,7 +340,7 @@ void  sucesso_gravacao (registro_produto R)
 {
    printf ("\n\nRegistro [%3d][%s][R$%5.2f]", R.Codprod, R.Nomeprod, R.Custoprod);
    printf ("\n gravado com sucesso!\n\n");
-   _sleep(200);
+   /*sleep(200);*/
 }
 
 void sucesso_gravacao_cartao (registro_cartao R)
@@ -354,7 +354,7 @@ void pagamento_bemsucedido (registro_pagamento Rpgto)
 {
    printf ("\n\nPAGAMENTO [%3d][%s][R$%5.2f]", Rpgto.Codpgto, Rpgto.Formapgto, Rpgto.Valorpgto);
    printf ("\n gravado com sucesso!\n\n");
-   _sleep(200);	
+   _sleep(200);
 }
 
 void  grava_produto	(registro_produto R)
@@ -497,17 +497,17 @@ void geraTicket(int nroPedido, int qtd, registro_pedido rped, float total, char 
 
 int CalculaRegistrosArq(char *nomeArq)
 {
-   FILE *Arq;
-   registro_pagamento R;
-   int numero_registros;
+   	FILE *Arq;
+   	registro_pagamento R;
+   	int numero_registros;
    
-   Arq = fopen (nomeArq, "r");
-   if (Arq==NULL)
-   {
-      numero_registros = 0; /* O arquivo não existe */
-   }
-   else
-   {   /* Calcula o tamanho do arquivo */
+   	Arq = fopen (nomeArq, "r");
+   	if (Arq==NULL)
+   	{
+      	numero_registros = 0; /* O arquivo não existe */
+   	}
+   	else
+   	{   /* Calcula o tamanho do arquivo */
 		if ( fseek (Arq, 0, SEEK_END) ) /* Aqui fseek tenta se posicionar no final do arquivo...*/
 		{
            printf("\nERRO ao calcular o tamanho de arquivo!\n");
@@ -533,18 +533,22 @@ int CalculaRegistrosArq(char *nomeArq)
 void registraPgto (registro_pagamento Rpgto, char flag)
 {
 	FILE * A;
-	if ( flag == 't')
-	   A = fopen (ULTIMO_PEDIDO, "w");
-	else
-	   A = fopen (ARQUIVO_DE_PAGAMENTOS, "a");
-	if (A == NULL)
-        falha_abrir_arquivo_pedidos();
+	if ( flag == 't'){
+		A = fopen (ULTIMO_PEDIDO, "w");	
+	} else {
+		A = fopen (ARQUIVO_DE_PAGAMENTOS, "a");	
+	}  
+	if (A == NULL) {
+		falha_abrir_arquivo_pedidos();		
+	} 
 	fwrite (&Rpgto, sizeof(Rpgto), 1, A );
-	if (ferror(A))	
-        falha_gravar_arquivo_pagamentos();
-    else
-       if ( flag != 't')
-           pagamento_bemsucedido(Rpgto);
+	if (ferror(A)) {
+		falha_gravar_arquivo_pagamentos();	
+	} else {
+		if ( flag != 't') {
+			pagamento_bemsucedido(Rpgto);	
+		}    	
+	}       
     fclose (A);
 }
 
@@ -552,17 +556,20 @@ void resgataTemp (registro_pagamento *Rpgto)
 {
 	FILE * A;
     A = fopen (ULTIMO_PEDIDO, "r");
-	if (A == NULL)
-        falha_abrir_arquivo_pedidos();
-	fread (Rpgto, sizeof(registro_pagamento), 1, A );
-	if (ferror(A))	
-        falha_ler_arquivo_pagamentos();
+	if (A == NULL) {
+		falha_abrir_arquivo_pedidos();	
+	}   
+	fread(&Rpgto, sizeof(registro_pagamento), 1, A );
+	
+	if (ferror(A))	{
+		falha_ler_arquivo_pagamentos();	
+	}   
     fclose (A);
 }
 
 void solicitaCartao(registro_cartao *Rcart)
 {   int i;
-	printf ("\nDigite o nro do cartão: "); 
+	printf ("\n Digite o nro do cartão: "); 
 	for (i=0; i<TAMCARTAO; i++)
 	{   do
 		{

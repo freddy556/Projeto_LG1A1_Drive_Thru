@@ -15,15 +15,15 @@ int main (void) {
 	system("MODE con cols=45 lines=30");
 	system("cls");
 	printf("\n\n   =======================================");
-	printf("\n   |               CLIENTE                 |");
+	printf("\n   |               CLIENTE               |");
 	printf("\n   =======================================");
-	printf("\n   |                                       |");
-	printf("\n   |          1. REALIZAR PEDIDO           |");
-	printf("\n   |                                       |");
-	printf("\n   |          2.    PAGAMENTO              |");
-	printf("\n   |                                       |");
-	printf("\n   |          0.     SAIR                  |");
-	printf("\n   |                                       |");
+	printf("\n   |                                     |");
+	printf("\n   |          1. REALIZAR PEDIDO         |");
+	printf("\n   |                                     |");
+	printf("\n   |          2.    PAGAMENTO            |");
+	printf("\n   |                                     |");
+	printf("\n   |          0.     SAIR                |");
+	printf("\n   |                                     |");
 	printf("\n   =======================================");
 	
 	printf("\n             ");

@@ -31,16 +31,16 @@ registro_produto reg;
 
 /* Funções */
 int CalculaRegistrosArq (char *nomeArq) {
-   FILE *Arq;
-   registro_pagamento R;
-   int numero_registros;
+   	FILE *Arq;
+   	registro_pagamento R;
+   	int numero_registros;
    
-   Arq = fopen (nomeArq, "r");
-   if (Arq==NULL) {
-      numero_registros = 0; /* O arquivo não existe */
-   } else {   /* Calcula o tamanho do arquivo */
+   	Arq = fopen (nomeArq, "r");
+   	if (Arq==NULL) {
+      	numero_registros = 0; /* O arquivo não existe */
+   	} else {   /* Calcula o tamanho do arquivo */
 		if ( fseek (Arq, 0, SEEK_END) ) {
-           printf("\nERRO ao calcular o tamanho de arquivo!\n");
+           printf("\n ERRO ao calcular o tamanho de arquivo!\n");
            getch();
            numero_registros = -1;
         }else{   
@@ -166,7 +166,7 @@ void registraPgto (registro_pagamento Rpgto, char flag) {
 	  	exit(0); 
 	} else {
 		if ( flag != 't')
-           pagamento_bemsucedido(Rpgto);
+        	pagamento_bemsucedido(Rpgto);
 	}  
     fclose (A);
 }
@@ -250,6 +250,7 @@ int main (){
 	/* 't' = guarda temporariamente esse registro para preservar o nro do pedido e o total*/
     registraPgto (Rpgto, 't');
 	
-	system("pagamento.exe");
+	system("pagamento");
+	
     return (0);
 }
