@@ -136,8 +136,8 @@ void geraTicket(int nroPedido, int qtd, registro_pedido rped, float total, char 
 		    fprintf (Ticket, "\n |       TOTAL ITENS | %d |                TOTAL | R$   %5.2f |", totalItem, total);
 		    fprintf (Ticket, "\n +-----------------------------------------------------------+");
 		} else {
-		   fprintf (Ticket, "\n | %2i | %-20s | R$ %7.2f | %3i | %i | R$ %7.2f |", 
-		   rped.Prodped.Codprod, rped.Prodped.Nomeprod, rped.Prodped.Custoprod, rped.Qtd, rped.QtdItem, rped.Valoritem);
+		   fprintf (Ticket, "\n | %2i | %-20s | R$ %7.2f | %3i | R$ %7.2f |", 
+		   rped.Prodped.Codprod, rped.Prodped.Nomeprod, rped.Prodped.Custoprod, rped.Qtd, rped.Valoritem);
 	 	}
 	 	FILE*Fila;
 		Fila = fopen ("FILA.TXT", "w");
@@ -268,7 +268,7 @@ int main (){
 		geraTicket(Rpgto.Codpgto, quantidade_itens, registroped, total, '0');
 		system ("TYPE TICKET.TXT");
 		printf ("\n +-----------------------------------------------------------+");
-		printf ("\n|Total de itens |  %d  |  Total da compra | R$ %7.2f |", totalItem, total);
+		printf ("\n |      Total de itens |  %d  |  Total da compra | R$ %7.2f |", totalItem, total);
 		printf ("\n +-----------------------------------------------------------+");
 	   
 		/* Pergunta se deseja mais algum produto */
