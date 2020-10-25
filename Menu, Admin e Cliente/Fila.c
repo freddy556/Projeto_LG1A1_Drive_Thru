@@ -138,28 +138,28 @@ void removeFila(){
 	/*char op;*/
 	int temp6, temp5, temp4, temp3, temp2, temp1, temp0;
 	/*int  p0, p1, p2, p3, p4, p5, p6;*/
-	start:;
+	start: ;
 	do{
 		fflush(stdin);
 		if(p6!=0){
-		temp6 = p0;
-		p0 = p1;
-		p1 = p2;
-		p2 = p3;
-		p3 = p4;
-		p4 = p5;
-		p5 = p6;
-		p6=0;
-		printf("\nPedido Nro %d\n", p0);
-		printf("\nPedido Nro %d\n", p1);
-		printf("\nPedido Nro %d\n", p2);
-		printf("\nPedido Nro %d\n", p3);
-		printf("\nPedido Nro %d\n", p4);
-		printf("\nPedido Nro %d\n", p5);
-		printf("\n\nPedido Nro %d removido com sucesso!\n", temp6);
-		printf("\nChamar leve para o pedido de cod1\n");
-		getch();
-		primeiroRemove();
+			temp6 = p0;
+			p0 = p1;
+			p1 = p2;
+			p2 = p3;
+			p3 = p4;
+			p4 = p5;
+			p5 = p6;
+			p6=0;
+			printf("\nPedido Nro %d\n", p0);
+			printf("\nPedido Nro %d\n", p1);
+			printf("\nPedido Nro %d\n", p2);
+			printf("\nPedido Nro %d\n", p3);
+			printf("\nPedido Nro %d\n", p4);
+			printf("\nPedido Nro %d\n", p5);
+			printf("\n\nPedido Nro %d removido com sucesso!\n", temp6);
+			printf("\nChamar leve para o pedido de cod1\n");
+			getch();
+			primeiroRemove();
 		}
 		else{
 			if(p5!=0){
@@ -282,7 +282,7 @@ void iniciaFila(){
 	/*char buffer[128];*/
 	Fila = fopen("FILAF.TXT", "r");
 	if(Fila==NULL){
-		printf("\nA fila está vazia!");
+		printf("\n A fila está vazia!");
 		return;
 	}
 		if(fgets(str, 30, Fila)!=NULL){
@@ -329,11 +329,11 @@ main(){
 	system("cls");
 	system("MODE con cols=80 lines=30");
 	char opc;
-	printf("\n--------------------FILA----------------------");
-	printf("\nPressione qualquer tecla");
+	printf("\n --------------------FILA----------------------");
+	printf("\n Pressione qualquer tecla");
 	getch();
 	iniciaFila();
-	printf("\nPressione qualquer tecla para retornar ao menu cliente ou r para remover o primeiro elemento da fila");
+	printf("\n Pressione qualquer tecla para retornar ao menu cliente ou r para remover o primeiro elemento da fila");
 	opc = getch();
 	if((opc=='r') || (opc=='R')){
 		removeFila();

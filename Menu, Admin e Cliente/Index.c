@@ -13,6 +13,7 @@
 int main (void) {
 	op: ;
 	system("MODE con cols=45 lines=30");
+	system("color 08");
 	system("cls");
 	printf("\n\n   =======================================");
 	printf("\n   |             ENTRAR COMO             |");

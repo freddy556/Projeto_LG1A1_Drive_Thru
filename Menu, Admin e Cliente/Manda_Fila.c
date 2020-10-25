@@ -34,7 +34,7 @@ ler_file(){
 	char buffer[128];
 	Fila = fopen("FILA.TXT", "r");
 	if(Fila==NULL){
-		printf("\nFalha ao abrir o arquivo FILA.TXT!");
+		printf("\n Falha ao abrir o arquivo FILA.TXT!");
 		return 1;
 	}
 	if(fgets(str, 30, Fila)!=NULL){
@@ -49,34 +49,35 @@ ler_file(){
 	fclose(Fila);
 	/*printf("\nO numero obtido foi %d", num);*/
 	if(num>3){
-		printf("\nO pedido Nro %d será enviado para a fila de espera por conter muitos itens (%d no total)!", CodPed, num);
-		printf("\nPressione qualquer tecla para gerar o arquivo da fila");
+		printf("\n O pedido Nro %d será enviado para a fila de espera por conter muitos itens (%d no total)!", CodPed, num);
+		printf("\n Pressione qualquer tecla para gerar o arquivo da fila");
 		getch();
 		
 		FILE*File;
 		File = fopen ("FILAF.TXT", "a");
 			if(File == NULL){
-			printf("\nErro ao gerar FILAF.DAT");
+			printf("\n Erro ao gerar FILAF.DAT");
 			getch();
 			}
 			else{
 				/*result = fwrite(&CodPed, sizeof(File), 1, File);*/
 		    	fprintf (File, "%d\n", CodPed);
-		    	printf("Elemento gravado: Pedido Nro %d", CodPed);
+		    	printf("\n Elemento gravado: Pedido Nro %d", CodPed);
 		    	fclose(File);	
 			}
 		fclose (File);
 		
-		printf("\nSucesso!\n");
-		printf("\nPressione qualquer tecla para retornar ao menu Cliente!");
+		printf("\n Sucesso!\n");
+		printf("\n Pressione qualquer tecla para retornar ao menu Cliente!");
 		getch();
 		system("Cliente_menu");
 		return;
 	}
 	else{
-		printf("\nChamar função de levar");
-		getch();
-		system("Cliente_menu");
+		/*printf("\n Chamar função de levar");*/
+		system("Leve_menu");
+		
+		exit(0);
 	}
 }
 

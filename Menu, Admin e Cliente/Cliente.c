@@ -124,7 +124,7 @@ void geraTicket(int nroPedido, int qtd, registro_pedido rped, float total, char 
 	} else {   
 		if (qtd==1) {	
 			fprintf (Ticket, "\n +-----------------------------------------------------------+");
-		    fprintf (Ticket, "\n |                %s             |", NOME_ESTABELECIMENTO);
+		    fprintf (Ticket, "\n |                %s              |", NOME_ESTABELECIMENTO);
 		    fprintf (Ticket, "\n +-----------------------------------------------------------+");
 		    fprintf (Ticket, "\n | Nro do pedido: %03i                                        |", nroPedido);
 		    fprintf (Ticket, "\n +-----------------------------------------------------------+");

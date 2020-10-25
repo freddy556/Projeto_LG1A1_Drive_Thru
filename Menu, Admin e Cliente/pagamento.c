@@ -152,7 +152,7 @@ int   main (void) {
     /* Captura forma de pagamento do pedido */
 	do
     {
-		system ("color 08");
+		system ("color b0");
     	system("MODE con cols=45 lines=30");
 		system ("cls");
     	printf ("\n    --- %s ---", NOME_ESTABELECIMENTO);
@@ -191,8 +191,8 @@ int   main (void) {
 		break;
 		case '0':
 			system("cls");
-			system("Admin");
-			/*exit (0);*/
+			system("Cliente_menu");
+			exit(0);
 			break;
 	}
 	/* Atualiza o valor do último pedido */
@@ -216,6 +216,7 @@ int   main (void) {
     	printf ("\n Erro! Último pedido não localizado!");
     	getch();
     	system("Cliente_menu");
+    	exit(0);
 	}
 	
 	system("pause");

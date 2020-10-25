@@ -14,6 +14,7 @@
 int main (void) {
 	op: ;
 	system("MODE con cols=45 lines=30");
+	system("color b0");
 	system("cls");
 	printf("\n\n   =======================================");
 	printf("\n   |               CLIENTE               |");
@@ -46,6 +47,7 @@ int main (void) {
 			break;
 		case '0':
 			printf("\n Saiu");
+			
 			exit(0);
 			break;
 		default:

@@ -66,6 +66,7 @@ int main (){
 	op: ;
 	char esc;
 	system("MODE con cols=45 lines=30");
+	system("color 08");
 	system("cls");
 	printf("\n\n   =======================================");
 	printf("\n   |              MENU ADMIN             |");
@@ -98,6 +99,7 @@ int main (){
 			break;
 		case '0':
 			system("Index");
+			
 			exit(0);
 			break;
 		default:
