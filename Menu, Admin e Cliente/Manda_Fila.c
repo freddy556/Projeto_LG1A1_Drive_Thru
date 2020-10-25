@@ -68,9 +68,9 @@ ler_file(){
 		fclose (File);
 		
 		printf("\n Sucesso!\n");
-		printf("\n Pressione qualquer tecla para retornar ao menu Cliente!");
+		printf("\n Pressione qualquer tecla para ir ao pague!");
 		getch();
-		system("Cliente_menu");
+		system("Leve_menu");
 		return;
 	}
 	else{

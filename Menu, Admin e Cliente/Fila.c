@@ -150,14 +150,18 @@ void removeFila(){
 			p4 = p5;
 			p5 = p6;
 			p6=0;
+			system("cls");
 			printf("\nPedido Nro %d\n", p0);
 			printf("\nPedido Nro %d\n", p1);
 			printf("\nPedido Nro %d\n", p2);
 			printf("\nPedido Nro %d\n", p3);
 			printf("\nPedido Nro %d\n", p4);
 			printf("\nPedido Nro %d\n", p5);
-			printf("\n\nPedido Nro %d removido com sucesso!\n", temp6);
-			printf("\nChamar leve para o pedido de cod1\n");
+			printf("\n\n\t-----------------------------------");
+			printf("\n\t| Chamar pedido Nro %d no balcao! |", temp6);
+			printf("\n\t-----------------------------------");
+			getch();
+			printf("\n\n Pedido Nro %d removido com sucesso!\n", temp6);
 			getch();
 			primeiroRemove();
 		}
@@ -171,13 +175,17 @@ void removeFila(){
 			p4 = p5;
 			p5 = 0;
 			p6 = 0;
+			system("cls");
 			printf("\nPedido Nro %d\n", p0);
 			printf("\nPedido Nro %d\n", p1);
 			printf("\nPedido Nro %d\n", p2);
 			printf("\nPedido Nro %d\n", p3);
 			printf("\nPedido Nro %d\n", p4);
-			printf("\n\nPedido Nro %d removido com sucesso!\n", temp5);
-			printf("\nChamar leve para o pedido de cod1\n");
+			printf("\n\n\t-----------------------------------");
+			printf("\n\t| Chamar pedido Nro %d no balcao! |", temp5);
+			printf("\n\t-----------------------------------");
+			getch();
+			printf("\n\n Pedido Nro %d removido com sucesso!\n", temp5);
 			getch();
 			segundoRemove();
 			
@@ -191,12 +199,16 @@ void removeFila(){
 				p4 = 0;
 				p5 = 0;
 				p6 = 0;
+				system("cls");
 				printf("\nPedido Nro %d\n", p0);
 				printf("\nPedido Nro %d\n", p1);
 				printf("\nPedido Nro %d\n", p2);
 				printf("\nPedido Nro %d\n", p3);
-				printf("\n\nPedido Nro %d removido com sucesso!\n", temp4);
-				printf("\nChamar leve para o pedido de cod1\n");
+				printf("\n\n\t-----------------------------------");
+				printf("\n\t| Chamar pedido Nro %d no balcao! |", temp4);
+				printf("\n\t-----------------------------------");
+				getch();
+				printf("\n\n Pedido Nro %d removido com sucesso!\n", temp4);
 				getch();
 				terceiroRemove();
 			}else{
@@ -209,11 +221,15 @@ void removeFila(){
 					p4 = 0;
 					p5 = 0;
 					p6 = 0;
+					system("cls");
 					printf("\nPedido Nro %d\n", p0);
 					printf("\nPedido Nro %d\n", p1);
 					printf("\nPedido Nro %d\n", p2);
-					printf("\n\nPedido Nro %d removido com sucesso!\n", temp3);
-					printf("\nChamar leve para o pedido de cod1\n");
+					printf("\n\n\t-----------------------------------");
+					printf("\n\t| Chamar pedido Nro %d no balcao! |", temp3);
+					printf("\n\t-----------------------------------");
+					getch();
+					printf("\n\n Pedido Nro %d removido com sucesso!\n", temp3);
 					getch();
 					quartoRemove();
 				}else{	
@@ -226,10 +242,14 @@ void removeFila(){
 						p4 = 0;
 						p5 = 0;
 						p6 = 0;
+						system("cls");
 						printf("\nPedido Nro %d\n", p0);
 						printf("\nPedido Nro %d\n", p1);
-						printf("\n\nPedido Nro %d removido com sucesso!\n", temp2);
-						printf("\nChamar leve para o pedido de cod1\n");
+						printf("\n\n\t-----------------------------------");
+						printf("\n\t| Chamar pedido Nro %d no balcao! |", temp2);
+						printf("\n\t-----------------------------------");
+						getch();
+						printf("\n\n Pedido Nro %d removido com sucesso!\n", temp2);
 						getch();
 						quintoRemove();
 					}else{
@@ -242,9 +262,13 @@ void removeFila(){
 							p4 = 0;
 							p5 = 0;
 							p6 = 0;
+							system("cls");
 							printf("\nPedido Nro %d\n", p0);
-							printf("\n\nPedido Nro %d removido com sucesso!\n", temp1);
-							printf("\nChamar leve para o pedido de cod1\n");
+							printf("\n\n\t-----------------------------------");
+							printf("\n\t| Chamar pedido Nro %d no balcao! |", temp1);
+							printf("\n\t-----------------------------------");
+							getch();
+							printf("\n\n Pedido Nro %d removido com sucesso!\n", temp1);
 							getch();
 							sextoRemove();					
 						}else{
@@ -257,8 +281,12 @@ void removeFila(){
 								p4 = 0;
 								p5 = 0;
 								p6 = 0;
-								printf("\n\nPedido Nro %d removido com sucesso!\n", temp0);
-								printf("\nChamar leve para o pedido de cod1\n");
+								system("cls");
+								printf("\n\n\t-----------------------------------");
+								printf("\n\t| Chamar pedido Nro %d no balcao! |", temp0);
+								printf("\n\t-----------------------------------");
+								getch();
+								printf("\n\n Pedido Nro %d removido com sucesso!\n", temp0);
 								getch();
 								ultimoRemove();
 							}
@@ -327,7 +355,7 @@ void iniciaFila(){
 main(){
 	setlocale(LC_ALL, "");
 	system("cls");
-	system("MODE con cols=80 lines=30");
+	system("MODE con cols=50 lines=30");
 	char opc;
 	printf("\n --------------------FILA----------------------");
 	printf("\n Pressione qualquer tecla");
