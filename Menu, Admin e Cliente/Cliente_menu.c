@@ -7,6 +7,7 @@
 #include <conio.h>
 #include <stdlib.h>
 
+
 /* Variaveis */
 
 /* Corpo do Programa */
@@ -18,11 +19,13 @@ int main (void) {
 	printf("\n   |               CLIENTE               |");
 	printf("\n   =======================================");
 	printf("\n   |                                     |");
-	printf("\n   |          1. REALIZAR PEDIDO         |");
+	printf("\n   |          1.   REALIZAR PEDIDO       |");
 	printf("\n   |                                     |");
-	printf("\n   |          2.    PAGAMENTO            |");
+	printf("\n   |          2.   PAGAMENTO             |");
 	printf("\n   |                                     |");
-	printf("\n   |          0.     SAIR                |");
+	printf("\n   |          3.   FILA                  |");
+	printf("\n   |                                     |");
+	printf("\n   |          0.   SAIR                  |");
 	printf("\n   |                                     |");
 	printf("\n   =======================================");
 	
@@ -37,6 +40,9 @@ int main (void) {
 		case '2':
 			system("pagamento");
 				
+			break;
+		case'3':
+			system("teste_de_fila");	
 			break;
 		case '0':
 			printf("\n Saiu");

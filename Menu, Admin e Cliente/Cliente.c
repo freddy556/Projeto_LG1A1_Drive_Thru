@@ -5,6 +5,7 @@
 #include <string.h>
 #include <locale.h>
 
+
 #define  NOME_ESTABELECIMENTO       "DRIVE THRU DO MICKEY & DONALD"
 
 /* Struct */
@@ -18,6 +19,7 @@ typedef struct {
 	registro_produto	Prodped;
 	int					Qtd;
 	float				Valoritem;
+	int					QtdItem;
 } registro_pedido;
 
 typedef struct {
@@ -28,6 +30,7 @@ typedef struct {
 
 /* Variaveis */
 registro_produto reg; 
+int      totalItem=0;
 
 /* Funções */
 int CalculaRegistrosArq (char *nomeArq) {
@@ -130,15 +133,40 @@ void geraTicket(int nroPedido, int qtd, registro_pedido rped, float total, char 
     	}
 		if ( flag == '1' ) {   
 			fprintf (Ticket, "\n +-----------------------------------------------------------+");
-		    fprintf (Ticket, "\n |                                        TOTAL | R$   %5.2f |", total);
+		    fprintf (Ticket, "\n |       TOTAL ITENS | %d |                TOTAL | R$   %5.2f |", totalItem, total);
 		    fprintf (Ticket, "\n +-----------------------------------------------------------+");
 		} else {
-		   fprintf (Ticket, "\n | %2i | %-20s | R$ %7.2f | %3i | R$ %7.2f |", 
-		   rped.Prodped.Codprod, rped.Prodped.Nomeprod, rped.Prodped.Custoprod, rped.Qtd, rped.Valoritem);
+		   fprintf (Ticket, "\n | %2i | %-20s | R$ %7.2f | %3i | %i | R$ %7.2f |", 
+		   rped.Prodped.Codprod, rped.Prodped.Nomeprod, rped.Prodped.Custoprod, rped.Qtd, rped.QtdItem, rped.Valoritem);
 	 	}
+	 	FILE*Fila;
+		Fila = fopen ("FILA.TXT", "w");
+			if(Fila == NULL){
+			printf("\nErro ao gerar FILA.TXT");
+			getch();
+			}
+			else{
+		    	fprintf (Fila, "%d\n%d", nroPedido, totalItem);
+		    	fclose(Fila);	
+			}
 		fclose (Ticket);
 	}
 }
+
+/*void geraFila(int, nroPedido, int totalItem){
+	FILE*Fila;
+	Fila = fopen ("FILA.TXT", "w");
+	if(Fila == NULL){
+		printf("\nErro ao gerar FILA.TXT");
+		getch();
+	}
+	else{
+		    fprintf (Fila, "\nNro Pedido: %d Itens: %d", nroPedido, totalItem);
+		    fclose(Fila);	
+	}
+	}*/
+	
+
 
 void pagamento_bemsucedido (registro_pagamento Rpgto) {
    printf ("\n\n PAGAMENTO [%3d][%s][R$%5.2f]", Rpgto.Codpgto, Rpgto.Formapgto, Rpgto.Valorpgto);
@@ -177,6 +205,7 @@ int main (){
 	char  esc;
     registro_pedido     registroped;
     float               total=0;
+    /*int totalItem=0;*/
     int quantidade_itens = 0;
     int codUltimoProduto = 0;
     registro_pagamento Rpgto;
@@ -218,19 +247,28 @@ int main (){
 	        	getch();
 	    	}
 		} while ( registroped.Qtd < 1);
+
 	   
 		/* Calcula o valor do item do pedido */
 		registroped.Valoritem = registroped.Qtd * registroped.Prodped.Custoprod;
 	   
 		/* Atualiza o total do pedido */
 		total = total + registroped.Valoritem;
+		
+		/*Calcula o valor de itens do pedido*/
+		totalItem = totalItem + registroped.Qtd;
+		
+		/*Atribuiu o total a struc*/
+		registroped.QtdItem = totalItem;
+
+		
 	   
 		/* Mostra o que foi comprado até o momento */
 		system("cls");
 		geraTicket(Rpgto.Codpgto, quantidade_itens, registroped, total, '0');
 		system ("TYPE TICKET.TXT");
 		printf ("\n +-----------------------------------------------------------+");
-		printf ("\n |\t\t\t        Total da compra | R$ %7.2f |", total);
+		printf ("\n|Total de itens |  %d  |  Total da compra | R$ %7.2f |", totalItem, total);
 		printf ("\n +-----------------------------------------------------------+");
 	   
 		/* Pergunta se deseja mais algum produto */
@@ -238,6 +276,8 @@ int main (){
 		fflush (stdin); esc = getche();
 	   
 	} while ( esc == 'S' || esc == 's');
+	
+	/*geraFila(totalItem);*/
 	
     
 	/* Mostra o ticket completo com o total a pagar */

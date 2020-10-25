@@ -151,7 +151,8 @@ int   main (void) {
     setlocale (LC_ALL, "");
     /* Captura forma de pagamento do pedido */
 	do
-    {	system ("color 08");
+    {
+		system ("color 08");
     	system("MODE con cols=45 lines=30");
 		system ("cls");
     	printf ("\n    --- %s ---", NOME_ESTABELECIMENTO);
@@ -216,6 +217,9 @@ int   main (void) {
     	getch();
     	system("Cliente_menu");
 	}
+	
+	system("pause");
+	system("Manda_Fila");
 	
     return (0);
 }
