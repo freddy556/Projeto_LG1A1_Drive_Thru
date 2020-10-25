@@ -42,7 +42,7 @@ int main (void) {
 				
 			break;
 		case'3':
-			system("teste_de_fila");	
+			system("Fila");	
 			break;
 		case '0':
 			printf("\n Saiu");
