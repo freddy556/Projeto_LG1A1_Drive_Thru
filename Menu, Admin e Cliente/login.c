@@ -1,3 +1,9 @@
+/*Arquivo contendo funções de login para o menu ADMIN*/
+
+/*Autor: Lucas Mendes
+Data: 16/10/2020*/
+
+/*LIBS*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
